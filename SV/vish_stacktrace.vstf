@@ -1,0 +1,54 @@
+# Current time Thu Oct 12 04:04:43 2023
+# ModelSim SE Stack Trace
+# Program = vish
+# Id = "2021.3"
+# Version = "2021.07"
+# Date = "Jul 13 2021"
+# Platform = win64
+
+Exception c0000005 has occurred at address 1402d86e9. Traceback:
+# 0    0x1402d86e9: 'Mtirpc_Init + 0x14ea89'
+# 1    0x1402d2b60: 'Mtirpc_Init + 0x148f00'
+# 2    0x1402d1dee: 'Mtirpc_Init + 0x14818e'
+# 3    0x1402d2687: 'Mtirpc_Init + 0x148a27'
+# 4    0x14027fe64: 'Mtirpc_Init + 0xf6204'
+# 5    0x140268e23: 'Mtirpc_Init + 0xdf1c3'
+# 6    0x1402d3570: 'Mtirpc_Init + 0x149910'
+# 7    0x1402d313d: 'Mtirpc_Init + 0x1494dd'
+# 8    0x140222fb4: 'Mtirpc_Init + 0x99354'
+# 9    0x14015f8a9: '<unknown (@0x14015f8a9)>'
+# 10   0x14015839e: '<unknown (@0x14015839e)>'
+# 11   0x1401581ba: '<unknown (@0x1401581ba)>'
+# 12   0x140159993: '<unknown (@0x140159993)>'
+# 13   0x6e0ba56d: 'Tcl_ServiceEvent + 0xed'
+# 14   0x6e0ba9e4: 'Tcl_DoOneEvent + 0x184'
+# 15   0x1403dd721: 'Sqlite3_Unload + 0x8ef1'
+# 16   0x14016b5dc: '<unknown (@0x14016b5dc)>'
+# 17   0x6e005226: 'TclInvokeStringCommand + 0xc6'
+# 18   0x6e007103: 'TclNRRunCallbacks + 0x63'
+# 19   0x6e008974: 'Tcl_EvalEx + 0xa34'
+# 20   0x6e0091a8: 'Tcl_Eval + 0x38'
+# 21   0x6e00a4f0: 'Tcl_GlobalEval + 0x30'
+# 22   0x14012cb35: '<unknown (@0x14012cb35)>'
+# 23   0x14012d325: '<unknown (@0x14012d325)>'
+# 24   0x14012df85: '<unknown (@0x14012df85)>'
+# 25   0x14012b80b: '<unknown (@0x14012b80b)>'
+# 26   0x6e005226: 'TclInvokeStringCommand + 0xc6'
+# 27   0x6e007103: 'TclNRRunCallbacks + 0x63'
+# 28   0x6e007103: 'TclNRRunCallbacks + 0x63'
+# 29   0x6e008974: 'Tcl_EvalEx + 0xa34'
+# 30   0x6e0091a8: 'Tcl_Eval + 0x38'
+# 31   0x1401811a2: '<unknown (@0x1401811a2)>'
+# 32   0x6e005226: 'TclInvokeStringCommand + 0xc6'
+# 33   0x6e007103: 'TclNRRunCallbacks + 0x63'
+# 34   0x6e008974: 'Tcl_EvalEx + 0xa34'
+# 35   0x6e0a4c69: 'Tcl_FSEvalFileEx + 0x229'
+# 36   0x6decd0f0: 'Tk_MainEx + 0x7a0'
+# 37   0x1401ad2a2: 'Mtirpc_Init + 0x23642'
+# 38   0x1401b027e: 'Mtirpc_Init + 0x2661e'
+# 39   0x140785d90: 'Tclsqlite3_Init + 0x1c000'
+# 40   0x7ff8ff23257d: 'BaseThreadInitThunk + 0x1d'
+# 41   0x7ff90084aa68: 'RtlUserThreadStart + 0x28'
+StackWalk failed 0
+# End of Stack Trace
+
