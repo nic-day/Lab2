@@ -16,8 +16,6 @@ module stimulus;
    
    integer 	 handle3;
    integer 	 desc3;
-   integer 	 i;  
-   integer       j;
 
    DES dut (key, plaintext, encrypt, ciphertext, cbc);
 
@@ -40,7 +38,7 @@ module stimulus;
    // apply test vectors on rising edge of clk
    always @(posedge clk)
      begin
-      cbc = 1;
+      cbc = 0;
 	#1; {plaintext, op, key, result} = testvectors[vectornum];
 	#0 encrypt = op[0];		  
      end  

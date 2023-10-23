@@ -11,13 +11,14 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# do des.do
+# do Des.do
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is nday9@NICKS-PC.
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is nday9@NICKS-PC.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt2".  Locker is nday9@NICKS-PC.
 # ** Warning: (vlib-34) Library already exists at "work".
 # Errors: 0, Warnings: 1
 # Model Technology ModelSim SE-64 vlog 2021.3 Compiler 2021.07 Jul 13 2021
-# Start time: 14:40:00 on Oct 19,2023
+# Start time: 12:49:32 on Oct 23,2023
 # vlog -reportprogress 300 des_stub.sv tb_des.sv 
 # -- Compiling module GenerateKeys
 # -- Compiling module PC1
@@ -41,10 +42,10 @@
 # 
 # Top level modules:
 # 	stimulus
-# End time: 14:40:00 on Oct 19,2023, Elapsed time: 0:00:00
+# End time: 12:49:32 on Oct 23,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" work.stimulus 
-# Start time: 14:40:00 on Oct 19,2023
+# Start time: 12:49:32 on Oct 23,2023
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading sv_std.std
 # Loading work.stimulus(fast)
@@ -70,11 +71,13 @@
 # .main_pane.wave.interior.cs.body.pw.wf
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: nday9  Hostname: NICKS-PC  ProcessID: 19592
-#           Attempting to use alternate WLF file "./wlft0ex3be".
+#           Attempting to use alternate WLF file "./wlfty7dbtm".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft0ex3be
-#          8 tests completed with          8 errors
-# ** Note: $finish    : tb_des.sv(62)
+#           Using alternate file: ./wlfty7dbtm
+#          8 tests completed with          0 errors
+# ** Note: $finish    : tb_des.sv(60)
 #    Time: 75 ns  Iteration: 1  Instance: /stimulus
 # 1
-# Break in Module stimulus at tb_des.sv line 62
+# Break in Module stimulus at tb_des.sv line 60
+# End time: 12:54:04 on Oct 23,2023, Elapsed time: 0:04:32
+# Errors: 0, Warnings: 2

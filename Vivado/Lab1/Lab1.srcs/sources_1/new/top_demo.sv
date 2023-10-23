@@ -38,22 +38,47 @@ module top_demo
   output logic sseg_cg,
   output logic sseg_dp,
   output logic [3:0] sseg_an
+ 
 );
 
   logic [16:0] CURRENT_COUNT;
   logic [16:0] NEXT_COUNT;
   logic        smol_clk;
+  logic [63:0] key, plaintext;
+  logic [63:0] cyphertext;
+  logic [63:0] sel; //selection of weather i use cyphertext, plaintext, or key
+  logic [15:0] display; //var for the 16 bit chunks of the sel for display on the seven segment displays.
+  assign key = 64'h433E4529462A4A62;
+  assign plaintext = 64'h2579DB866C0F528C;
   
-  // Place TicTacToe instantiation here
+  // Place des_dut instantiation here
+  DES dut(key, plaintext, sw[0], cyphertext, sw[1]);
+  
+  //case block for seven segment output
+  always @ (*) begin
+    case(sw[7:6])
+        2'b00    :   sel = cyphertext;
+        2'b01    :   sel = plaintext;
+        2'b10    :   sel = key;
+        default  :   sel = 64'h0;
+    endcase
+    case(sw[5:4])
+        2'b00    :  display = sel[15:0];
+        2'b01    :  display = sel[31:16];
+        2'b10    :  display = sel[47:32];
+        2'b11    :  display = sel[63:48];
+    endcase
+  end
+        
   
   // 7-segment display
   segment_driver driver(
   .clk(smol_clk),
   .rst(btn[3]),
-  .digit0(sw[3:0]),
-  .digit1(4'b0111),
-  .digit2(sw[7:4]),
-  .digit3(4'b1111),
+  .digit0(display[3:0]),
+  .digit1(display[7:4]),
+  .digit2(display[11:8]),
+  .digit3(display[15:12]),
   .decimals({1'b0, btn[2:0]}),
   .segment_cathodes({sseg_dp, sseg_cg, sseg_cf, sseg_ce, sseg_cd, sseg_cc, sseg_cb, sseg_ca}),
   .digit_anodes(sseg_an)
