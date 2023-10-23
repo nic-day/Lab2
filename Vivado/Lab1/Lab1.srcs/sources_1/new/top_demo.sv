@@ -85,6 +85,7 @@ module top_demo
   );
 
 // Register logic storing clock counts
+
   always@(posedge sysclk_125mhz)
   begin
     if(btn[3])
